@@ -1,0 +1,63 @@
+@(noticiaForm: play.data.Form[views.validators.NoticiaFormData])
+
+@import helper._
+@import templates.bootstrap._
+
+@views.html.admin.main("Cadastro de Notícias") {
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Cadastro de Notícias</div>
+            <div class="panel-body">
+            @form(routes.NoticiaController.inserir, 'enctype -> "multipart/form-data", 'class -> "form-horizontal", 'id -> "noticiaForm") {
+
+                @if(noticiaForm.hasGlobalErrors) {
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"></label>
+                        <div class="col-sm-6">
+                            <p class="alert alert-danger text-center">@noticiaForm.globalError.message</p>
+                        </div>
+                    </div>
+                }
+
+                    <!-- titulo -->
+                @texto(noticiaForm("titulo"),
+                    label = "Título:",
+                    placeholder = "Insira o título")
+
+                    <!-- resumo -->
+                @textoarea(noticiaForm("resumo"),
+                    label = "Resumo:",
+                    placeholder = "Insira o resumo")
+
+                    <!-- Site -->
+                @texto(noticiaForm("url"),
+                    label = "Url:",
+                    placeholder = "Insira o endereço eletrônico")
+
+                    <!-- Arquivo -->
+                @arquivo(noticiaForm("arquivo"),
+                    label = "Capa:")
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-12">
+                        <input class="btn btn-success" type="submit" id="btnSubmit" value="Cadastrar"/>
+                        <a class="btn btn-default" type="button" href="@routes.NoticiaController.telaLista">Cancelar</a>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+
+}
+
+<script type="text/javascript">
+    window.onbeforeunload = function () {
+        var inputs = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type == "button" || inputs[i].type == "submit") {
+                inputs[i].disabled = true;
+            }
+        }
+    };
+</script>

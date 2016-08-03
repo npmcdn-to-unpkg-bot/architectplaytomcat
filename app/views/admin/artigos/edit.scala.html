@@ -1,0 +1,67 @@
+@(id: Long, artigoForm: play.data.Form[Artigo])
+
+@import helper._
+
+@views.html.admin.main("Editar Artigo") {
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Editar Artigo</div>
+            <div class="panel-body">
+                @form(routes.ArtigoController.editar(id), 'enctype -> "multipart/form-data", 'class -> "form-horizontal", 'id -> "artigoForm") {
+
+                @if(artigoForm.hasGlobalErrors) {
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"></label>
+                    <div class="col-sm-6">
+                        <p class="alert alert-danger text-center">@artigoForm.globalError.message</p>
+                    </div>
+                </div>
+                }
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"></label>
+                    <div class="col-sm-6">
+                        @inputText(artigoForm("titulo"),
+                        'class -> "form-control",
+                        'placeholder -> "Insira o título",
+                        '_label -> "Título:",
+                        '_help -> "")
+
+                        @textarea(artigoForm("resumo"),
+                        'class -> "form-control",
+                        'placeholder -> "Insira o resumo",
+                        '_label -> "Resumo:",
+                        'rows -> 4,
+                        '_help -> "")
+
+                        @inputFile(artigoForm("arquivo"),
+                        'class -> "form-control",
+                        '_label -> "Resumo:",
+                        '_help -> "")
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-6">
+                        <input class="btn btn-primary" type="submit" id="btnSubmit" value="Editar"/>
+                        <a href="@routes.ArtigoController.telaLista" class="btn btn-default" type="button">Cancelar</a>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+    window.onbeforeunload = function () {
+        var inputs = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type == "button" || inputs[i].type == "submit") {
+                inputs[i].disabled = true;
+            }
+        }
+    };
+</script>

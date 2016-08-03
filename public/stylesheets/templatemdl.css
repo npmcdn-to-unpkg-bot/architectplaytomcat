@@ -1,0 +1,194 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.demo-layout .demo-header .mdl-textfield {
+  padding: 0;
+  margin-top: 41px;
+}
+
+.demo-layout .demo-header .mdl-textfield .mdl-textfield__expandable-holder {
+  bottom: 19px;
+}
+
+
+/* iOS Safari specific workaround */
+.demo-drawer .mdl-menu__container {
+  z-index: -1;
+}
+.demo-drawer .demo-navigation {
+  z-index: -2;
+}
+/* END iOS Safari specific workaround */
+.demo-drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* muda a cor do botão do menu esquerdo quando ele esta minimizado */
+.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+    color: rgb(255, 255, 255);
+}
+
+/*Modificado o height, propriedade do header do menu esquerdo*/
+.demo-drawer-header {
+    box-sizing: border-box;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+/* cor da fonte do menu esquerdo e cor de fundo do menu esquerdo distancia de todos os links do menu*/
+.demo-layout .demo-navigation .mdl-navigation__link {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.56);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 10px 40px;
+}
+
+/*Muda as cores dos seletores do menu esquerdo*/
+.demo-layout .demo-navigation .mdl-navigation__link:hover {
+    background-color: #E0E0E0;
+    color: #000000;
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* tamanho dos ícones do menu esquerdo e distância*/
+.demo-navigation .mdl-navigation__link .material-icons {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.demo-avatar-dropdown {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.demo-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+}
+
+.active {
+   background-color: #EEEEEE;
+}
+
+.demo-content {
+  max-width: 1080px;
+}
+
+.subtitulo {
+    background-color: #546e7a;
+    color: #fff;
+}
+
+.subtitulo .conteudo-pagina {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .esconde-celular {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .mostra-celular {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ellipsis-celular {
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* cor da fonte do menu esquerdo e cor de fundo do menu esquerdo distancia de todos os links do menu*/
+.demo-layout .top-navigation .mdl-navigation__link {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0px 13px;
+}
+
+/*Muda as cores dos seletores do menu superior*/
+.demo-layout .top-navigation .mdl-navigation__link:hover {
+    background-color: #f5b449;
+    color: #ffffff;
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* tamanho dos ícones do menu esquerdo e distância*/
+.top-navigation .mdl-navigation__link .material-icons {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.activetop {
+    background-color: #f5973c;
+}

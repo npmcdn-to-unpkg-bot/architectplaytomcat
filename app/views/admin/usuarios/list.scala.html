@@ -1,0 +1,25 @@
+@(usuarios: List[Usuario])(mensagem : String)
+
+@views.html.admin.main("Administração - Usuários") {
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">Lista de Usuários</div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                        </tr>
+                        @for(usuario <- usuarios) {
+                            <tr>
+                                <td><a href="@routes.UsuarioController.telaDetalhe(usuario.getId())">@usuario.getNome</a></td>
+                                <td>@usuario.getEmail</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}

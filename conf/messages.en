@@ -1,0 +1,157 @@
+# Titulo do sistema
+app.title=Digital Library
+app.error=Internal server error
+app.error.found=Not found
+app.error.access=Unauthorized
+app.404=Error 404
+app.hello=Hello
+app.welcome.message=Welcome
+app.best=Best regards
+app.send.confirm.email.message=It looks like you just registered in the Digital Library of CIBiogás. If you did, to complete the registration process, simply click the link below, or copy and paste it into your browser.
+app.send.register.email.message=Your account was registered successfully!
+app.send.password.email.change.message=The password was successfully changed!
+
+# Mensagens de Email e perfil do usuario
+client.confirm.email.message=Do you want to update your password? will be sent email to your account.
+client.confirm.email.button.update=Update
+client.cancel.email.button=Cancel
+client.send.email.message=The email has been sent!
+client.error=Not authorized
+client.error.operation=Could not perform this operation!
+client.profile.title=Profile
+client.profile.tooltip.title=Password
+client.profile.name=Name
+client.profile.email=Email
+
+# Pagina de fale conosco
+contact.title=Contact
+contact.field.name=Name
+contact.field.email=Email
+contact.field.subject=Subject matter
+contact.field.message=Message
+contact.field.required=Required fields
+contact.button=Send
+
+# Pagina de fle conosco mas na parte de localizacao
+contact.location.title=Location
+contact.location.company.title=Company Headquarters
+contact.location.address=Address
+contact.location.email=Email
+contact.location.phone=Phone
+
+# Menu Drawer
+menu.1=Home
+menu.2=Courses
+menu.3=Materials
+menu.4=Articles
+menu.5=Books
+menu.6=Videos
+menu.7=Photos
+menu.8=Contacts
+menu.9=Contact us
+menu.10=Rights
+menu.11=Meet our site
+menu.12=Management
+menu.13=Get in
+
+# Menu Drawer biogas
+menu.biogas.1=Biogas
+menu.biogas.2=About Biogas
+menu.biogas.3=Case Study
+menu.biogas.4=Tools
+menu.biogas.5=P & D
+menu.biogas.6=Regulatory Marks
+menu.biogas.7=Financial and Economic Aspects
+menu.biogas.8=National Register and Biogasmap
+menu.biogas.9=Events
+menu.biogas.10=News
+menu.biogas.11=Publications
+
+# Menu superior lado direito
+menu.top.title.1=Home
+menu.top.title.2=Courses
+menu.top.title.3=Materials
+menu.top.title.4=Articles
+menu.top.title.5=Books
+menu.top.title.6=Videos
+menu.top.title.7=Photos
+menu.top.title.8=Contact us
+menu.top.title.9=Rights
+
+menu.top.title.10=About Biogas
+menu.top.title.11=Case Study
+menu.top.title.12=Tools
+menu.top.title.13=P & D
+menu.top.title.14=Regulatory Marks
+menu.top.title.15=Financial and Economic Aspects
+menu.top.title.16=National Register and Biogasmap
+menu.top.title.17=User
+
+# Menu Superior lado esquerdo
+menu.14=Profile
+menu.15=Logout
+menu.16=Login
+
+# Login form
+login.page.title=Login
+login.username=Email
+login.password=Password
+login.register=Register
+login=Login
+login.success=User Successfully Authenticated.
+authenticated.page.title=Authenticated
+
+# Login form errors
+login.error=Unknown username or password.
+login.error.found=User not found.
+login.error.field=Please complete with email and password.
+login.error.confirm=The user has not been confirmed! Please check your email!
+
+# Register form
+register.page.title=Register
+register.username=Full name
+register.email=Email
+register.password=Password
+register.confirm.password=Confirmation
+register=Register
+register.success=User successfully registered.
+register.success.verify=Please check your email account to validate your register.
+
+# Pagina de ativacao da conta
+confirmation.page.title=Confirmation
+confirmation.success=Your account has been successfully activated!
+confirmation.success.login=You can login
+confirmation.error=Confirmation Error
+confirmation.already.success=This user account has been confirmed. Just log in.
+confirmation.invalid=Your activation code is invalid!
+
+# Register form errors
+register.error.field=Please complete all fields.
+register.error.already.registered=User already registered.
+register.bad.password=Passwords do not match.
+
+# Pagina de pedido de modificar senha
+reset.page.title=Reset
+token.null=Token is null
+reset.token.null=The link to update the password is invalid, please check and try again.
+reset.token.invalid=The link to update the password has expired.
+
+# Pagina de modificar senha
+password.change.page.title=Change password
+password.change=Password
+password.confirm=Confirmation
+password.register=Change
+password.change.email.message=You made a request to change your password in the Digital Library of CIBiogás. Just click the link below, or copy and paste it into your browser.
+password.change.error.field=Please complete with Password and Confirmation.
+password.change.user.error=User not found.
+password.change.success=Password changed successfully! You can now perform authentication.
+
+# Cartoes
+card.button.title=More Information
+card.button.pdf.title=To View
+
+card.event.list.title=Event List
+card.event.name.title=Name
+card.event.local.title=Local
+card.event.institution.title=Institution
+card.event.site.title=Website

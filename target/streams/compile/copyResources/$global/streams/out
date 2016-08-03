@@ -1,0 +1,16 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/server.conf,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/server.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/messages.en,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/messages.en)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/application.conf,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/evolutions,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/mail.conf,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/mail.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/messages.pt,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/messages.pt)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/file.conf,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/file.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/database.conf,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/database.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/routes,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/logback.xml,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/messages.es,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/messages.es)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/messages.pt-BR,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/messages.pt-BR)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/evolutions/default,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/evolutions/default/2.sql,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/evolutions/default/2.sql)[0m
+[0m[[0mdebug[0m] [0m	(/home/haroldo/projetos/architectplay/conf/evolutions/default/1.sql,/home/haroldo/projetos/architectplay/target/scala-2.11/classes/evolutions/default/1.sql)[0m
