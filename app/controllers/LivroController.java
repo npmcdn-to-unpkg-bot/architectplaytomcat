@@ -24,6 +24,7 @@ import java.util.Date;
 import java.util.List;
 
 import static play.data.Form.form;
+import static views.validators.ValidaPDF.isPDF2;
 
 @Security.Authenticated(Secured.class)
 public class LivroController extends Controller {
@@ -233,7 +234,14 @@ public class LivroController extends Controller {
                     livro.setNomeArquivo(pdf);
 
                     String tipoDeConteudo = arquivo.getContentType();
+
                     File file = arquivo.getFile();
+
+                    if (!isPDF2(file)) {
+                        formData.reject("Arquivo PDF Inválido");
+                        return badRequest(views.html.admin.livros.create.render(formData));
+                    }
+
                     String diretorioDePdfsLivros = Play.application().configuration().getString("diretorioDePdfsLivros");
                     String contentTypePadraoDePdfs = Play.application().configuration().getString("contentTypePadraoDePdfs");
 
@@ -319,7 +327,14 @@ public class LivroController extends Controller {
                     livro.setNomeArquivo(pdf);
 
                     String tipoDeConteudo = arquivo.getContentType();
+
                     File file = arquivo.getFile();
+
+                    if (!isPDF2(file)) {
+                        formData.reject("Arquivo PDF Inválido");
+                        return badRequest(views.html.admin.livros.edit.render(id,formData));
+                    }
+
                     String diretorioDePdfsLivros = Play.application().configuration().getString("diretorioDePdfsLivros");
                     String contentTypePadraoDePdfs = Play.application().configuration().getString("contentTypePadraoDePdfs");
 

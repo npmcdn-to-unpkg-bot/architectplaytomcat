@@ -26,6 +26,7 @@ import java.util.Date;
 import java.util.List;
 
 import static play.data.Form.form;
+import static views.validators.ValidaPDF.isPDF2;
 
 @Security.Authenticated(Secured.class)
 public class ArtigoController extends Controller {
@@ -252,6 +253,12 @@ public class ArtigoController extends Controller {
 
                 File file = arquivo.getFile();
 
+                if (!isPDF2(file)) {
+                    DynamicForm formDeErro = form.fill(formPreenchido.data());
+                    formDeErro.reject("Arquivo PDF inválido");
+                    return badRequest(views.html.admin.artigos.create.render(formDeErro));
+                }
+
                 String diretorioDePdfsArtigos = Play.application().configuration().getString("diretorioDePdfsArtigos");
                 String contentTypePadraoDePdfs = Play.application().configuration().getString("contentTypePadraoDePdfs");
 
@@ -331,6 +338,12 @@ public class ArtigoController extends Controller {
                 String tipoDeConteudo = arquivo.getContentType();
 
                 File file = arquivo.getFile();
+
+                if (!isPDF2(file)) {
+                    Form<Artigo> formDeErro = artigoForm.fill(Artigo.find.byId(id));
+                    formDeErro.reject("Arquivo PDF inválido");
+                    return badRequest(views.html.admin.artigos.edit.render(id,formDeErro));
+                }
 
                 String diretorioDePdfsArtigos = Play.application().configuration().getString("diretorioDePdfsArtigos");
                 String contentTypePadraoDePdfs = Play.application().configuration().getString("contentTypePadraoDePdfs");
